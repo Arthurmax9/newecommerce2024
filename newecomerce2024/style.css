@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(123, 123, 123);
+    color: white;
+}
+
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #000000; /* Adicione a cor desejada */
+    color: white; /* Adicione a cor desejada para o texto */
+  }
+  
+  .logo {
+    flex: 0 0 auto;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  ul li a {
+    text-decoration: none; /* Remove a decoração padrão do link */
+  color: inherit;
+    margin-right: 1rem; /* Espaçamento entre os itens, ajuste conforme necessário */
+    
+  }
+  
+  .nav_section a,
+  .shopping_cart a {
+    flex: 0 0 auto;
+    text-decoration: none; /* Remove a decoração padrão do link */
+  color: inherit;
+    
+  }
+  
+  .material-symbols-outlined {
+    font-family: 'Material Icons Outlined';
+    font-size: 24px; /* Tamanho do ícone, ajuste conforme necessário */
+  }
+  
+
+  footer div{
+    background-color: black;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+footer div ul li{
+    background-color: black;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+  }
