@@ -51,74 +51,57 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         // Adicione mais produtos conforme necessário
     ];
-
-    // Função para renderizar os produtos
+    const cartPanel = document.getElementById("cartPanel");
+    const cartItemsContainer = document.getElementById("cartItems");
+    let cartCount = 0;
+    
+    function toggleCartPanel() {
+        cartPanel.style.right = cartPanel.style.right === "0px" ? "-100%" : "0px";
+    }
+    
+    function addToCart(product) {
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
+        cartItem.innerHTML = `<p>${product.description} - $${product.price.toFixed(2)}</p>`;
+        cartItemsContainer.appendChild(cartItem);
+    
+        cartCount++;
+        document.getElementById("cartCount").textContent = cartCount;
+    }
+    
     function renderProducts() {
         const productSection = document.getElementById("productSection");
-
-        // Limpar a seção antes de renderizar os produtos
+    
         productSection.innerHTML = "";
-
-        // Iterar sobre os produtos e criar divs dinâmicas
+    
         products.forEach(product => {
             const productDiv = document.createElement("div");
             productDiv.classList.add("product");
             productDiv.id = `product_${product.id}`;
-
+    
             const imageElement = document.createElement("img");
             imageElement.src = product.image;
             productDiv.appendChild(imageElement);
-
+    
             const descriptionElement = document.createElement("p");
             descriptionElement.textContent = product.description;
             productDiv.appendChild(descriptionElement);
-
+    
             const priceElement = document.createElement("p");
             priceElement.textContent = `$${product.price.toFixed(2)}`;
             productDiv.appendChild(priceElement);
-
-         const addToCartButton = document.createElement("button");
+    
+            const addToCartButton = document.createElement("button");
             addToCartButton.textContent = "Adicionar ao Carrinho";
             addToCartButton.addEventListener("click", () => {
-                // Adicione a lógica para "Adicionar ao Carrinho" aqui
                 alert(`Produto "${product.description}" adicionado ao carrinho.`);
+                addToCart(product);
             });
             productDiv.appendChild(addToCartButton);
-
-            // Adicione a div do produto à seção
+    
             productSection.appendChild(productDiv);
         });
     }
-
-    // Chame a função para renderizar os produtos
+    
     renderProducts();
 });
-
-const cartPanel = document.getElementById("cartPanel");
-const cartItemsContainer = document.getElementById("cartItems");
-let cartCount = 0;
-
-function toggleCartPanel() {
-    cartPanel.style.right = cartPanel.style.right === "0px" ? "-100%" : "0px";
-}
-
-function addToCart(product) {
-    const cartItem = document.createElement("div");
-    cartItem.classList.add("cart-item");
-    cartItem.innerHTML = `<p>${product.description} - $${product.price.toFixed(2)}</p>`;
-    cartItemsContainer.appendChild(cartItem);
-
-    cartCount++;
-    document.getElementById("cartCount").textContent = cartCount;
-}
-
-// Exemplo de uso ao clicar no botão "Adicionar ao Carrinho"
-document.getElementById("productSection").addEventListener("click", function (event) {
-    const target = event.target;
-    if (target.tagName === "BUTTON") {
-        const productId = target.parentNode.id.split("_")[1];
-        const product = products.find(p => p.id == productId);
-        addToCart(product);
-    }
-});
-

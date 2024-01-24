@@ -32,19 +32,10 @@ body{
     margin-right: 1rem; /* Espaçamento entre os itens, ajuste conforme necessário */
     
   }
+
   
-  .nav_section a,
-  .shopping_cart a {
-    flex: 0 0 auto;
-    text-decoration: none; /* Remove a decoração padrão do link */
-  color: inherit;
-    
-  }
   
-  .material-symbols-outlined {
-    font-family: 'Material Icons Outlined';
-    font-size: 24px; /* Tamanho do ícone, ajuste conforme necessário */
-  }
+  
   
 
   footer div{

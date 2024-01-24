@@ -1,5 +1,6 @@
 body {
-    font-family: 'Arial', sans-serif; /* Use a fonte desejada */
+    font-family: 'Arial', sans-serif;
+    /* Use a fonte desejada */
     margin: 0;
 }
 
@@ -15,18 +16,20 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
-    width: calc(25% - 20px); 
+    width: calc(25% - 20px);
     margin: 10px;
     box-sizing: border-box;
     border-radius: 20px;
     background-color: rgb(23, 3, 43);
-    height: 300px; /* Defina a altura desejada para todas as divs dos produtos */
+    height: 300px;
+    /* Defina a altura desejada para todas as divs dos produtos */
 }
 
 .product img {
     max-width: 100%;
     height: auto;
-    max-height: 70%; /* Ajuste conforme necessário */
+    max-height: 70%;
+    /* Ajuste conforme necessário */
 }
 
 .product p {
@@ -35,18 +38,27 @@ body {
 
 /* Estilos para o botão "Saiba Mais" */
 .product button {
-    background-color: #4CAF50; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    width: 50%; /* Largura do botão ajustada para 100% */
-    padding: px; /* Espaçamento interno ajustado */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Cantos arredondados */
-    cursor: pointer; /* Cursor tipo mão ao passar sobre o botão */
-    font-size: 16px; /* Tamanho da fonte */
+    background-color: #4CAF50;
+    /* Cor de fundo */
+    color: white;
+    /* Cor do texto */
+    width: 50%;
+    /* Largura do botão ajustada para 100% */
+    padding: px;
+    /* Espaçamento interno ajustado */
+    border: none;
+    /* Sem borda */
+    border-radius: 5px;
+    /* Cantos arredondados */
+    cursor: pointer;
+    /* Cursor tipo mão ao passar sobre o botão */
+    font-size: 16px;
+    /* Tamanho da fonte */
 }
 
 .product button:hover {
-    background-color: #45a049; /* Cor de fundo ao passar sobre o botão */
+    background-color: #45a049;
+    /* Cor de fundo ao passar sobre o botão */
 }
 
 body {
@@ -55,26 +67,42 @@ body {
     overflow: hidden;
 }
 
+
+
 .shopping_cart {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
     display: flex;
-    align-items: center;
+    position: relative;
 }
 
 #cartCount {
     background-color: #e74c3c;
+    width: 10px;
+    height: 20px;
     color: #fff;
-    border-radius: 50%;
-    padding: 5px;
-    margin-left: 5px;
+    border-radius: 300%;
+    padding: 2px; /* Reduzi o padding para diminuir o tamanho geral */
+    margin-left: 10px;
+    position: absolute;
+    top: -8px; /* Ajuste conforme necessário para posicionar acima */
+    right: -7px; /* Ajuste para mover mais para a direita */
 }
+
+.nav_section a,
+.shopping_cart a {
+    flex: 0 0 auto;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Icons Outlined';
+    font-size: 40px;
+    width: 100%;
+    cursor: pointer;
+}
+
 
 .cart-panel {
     position: fixed;
@@ -97,12 +125,13 @@ body {
     cursor: pointer;
     font-size: 20px;
 }
+
 #cartPanel {
     position: fixed;
     top: 0;
     right: -100%;
     height: 100%;
-    width: 100%;
+    width: 80%;
     background-color: #f1f1f1;
     overflow-x: hidden;
     transition: 0.5s;
