@@ -55,9 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartItemsContainer = document.getElementById("cartItems");
     let cartCount = 0;
     
-    function toggleCartPanel() {
-        cartPanel.style.right = cartPanel.style.right === "0px" ? "-100%" : "0px";
-    }
+    function toggleSidebar() {
+        var sidebar = document.getElementById('cartPanel');
+        if (cartPanel.style.width === '250px') {
+            cartPanel.style.width = '0';
+        } else {
+            cartPanel.style.width = '250px';
+        }
+      }
     
     function addToCart(product) {
         const cartItem = document.createElement("div");

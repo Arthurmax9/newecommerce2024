@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Div Lateral</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.sidebar {
+  width: 0;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidebar p {
+  padding: 20px;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon" onclick="toggleSidebar()">☰</div>
+    <div class="sidebar" id="sidebar">
+      <!-- Conteúdo da sua barra lateral -->
+      <p>Conteúdo da barra lateral</p>
+    </div>
+    <div class="content">
+      <!-- Conteúdo principal da sua página -->
+      <p>Conteúdo principal da página</p>
+    </div>
+  </div>
+  <script>function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    if (sidebar.style.width === '250px') {
+      sidebar.style.width = '0';
+    } else {
+      sidebar.style.width = '250px';
+    }
+  }
+  
+
+  </script>
+</body>
+</html>
