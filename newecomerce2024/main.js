@@ -55,12 +55,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartItemsContainer = document.getElementById("cartItems");
     let cartCount = 0;
     
-    function toggleSidebar() {
-        var sidebar = document.getElementById('cartPanel');
-        if (cartPanel.style.width === '250px') {
-            cartPanel.style.width = '0';
+    function toggleCarPanel() {
+        var carPanel = document.getElementById('carPanel');
+        if (carPanel.style.width === '250px') {
+          carPanel.style.width = '0';
         } else {
-            cartPanel.style.width = '250px';
+          carPanel.style.width = '250px';
         }
       }
     
